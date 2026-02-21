@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>itvy | From Inspiration to Itinerary in Seconds</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Tailwind Config for Custom Colors/Fonts -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#f0fdfa',
+                            100: '#ccfbf1',
+                            500: '#14b8a6',
+                            600: '#0d9488',
+                            900: '#134e4a',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .gradient-text {
+            background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .blob {
+            position: absolute;
+            filter: blur(80px);
+            z-index: -1;
+            opacity: 0.4;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900 antialiased overflow-x-hidden">
+
+    <!-- Background Decorative Blobs -->
+    <div class="blob bg-blue-300 w-96 h-96 rounded-full top-[-10%] left-[-10%]"></div>
+    <div class="blob bg-purple-300 w-96 h-96 rounded-full top-[20%] right-[-10%]"></div>
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-white/80 backdrop-blur-md border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center gap-2">
+                    <i data-lucide="plane-takeoff" class="text-blue-600 w-6 h-6"></i>
+                    <span class="font-bold text-xl tracking-tight">itvy <span class="text-sm font-normal text-slate-500 bg-slate-100 px-2 py-0.5 rounded-full ml-1">v1.0.0</span></span>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#problem" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">The Problem</a>
+                    <a href="#features" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">Roadmap</a>
+                    <a href="#tech" class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">Tech Stack</a>
+                </div>
+                <div class="flex items-center gap-4">
+                    <a href="https://github.com/itechniqs/itvy" target="_blank" class="text-slate-500 hover:text-slate-900 transition-colors">
+                        <i data-lucide="github" class="w-5 h-5"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 sm:pt-40 sm:pb-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto flex flex-col items-center text-center">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 text-blue-700 text-sm font-medium mb-8 border border-blue-100">
+            <span class="flex h-2 w-2 rounded-full bg-blue-600 animate-pulse"></span>
+            Autonomous Context-Aware Travel Agent
+        </div>
+        
+        <h1 class="text-5xl sm:text-6xl md:text-7xl font-extrabold tracking-tight mb-6 max-w-4xl">
+            From Inspiration to <br class="hidden sm:block" />
+            <span class="gradient-text">Itinerary in Seconds.</span>
+        </h1>
+        
+        <p class="text-lg sm:text-xl text-slate-600 mb-10 max-w-2xl leading-relaxed">
+            Bridge the gap between social media inspiration and real-world execution. Convert screenshots and URLs into optimized, budget-conscious, and hyper-local itineraries instantly.
+        </p>
+        
+        <div class="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
+            <!-- Download APK Button -->
+            <a href="downloads/itvy-latest.apk" download class="group relative flex items-center justify-center gap-3 bg-slate-900 text-white px-8 py-4 rounded-2xl hover:bg-slate-800 transition-all shadow-lg hover:shadow-xl hover:-translate-y-1 w-full sm:w-auto">
+                <i data-lucide="smartphone" class="w-6 h-6 text-green-400"></i>
+                <div class="text-left">
+                    <div class="text-xs text-slate-300 font-medium">Download for Android</div>
+                    <div class="font-semibold text-lg leading-tight">Get the APK</div>
+                </div>
+            </a>
+
+            <!-- Download iOS Button (Placeholder/Coming Soon) -->
+            <button onclick="alert('iOS version is currently in development. Check our GitHub for updates!')" class="group relative flex items-center justify-center gap-3 bg-white text-slate-900 border border-slate-200 px-8 py-4 rounded-2xl hover:bg-slate-50 transition-all shadow-sm hover:shadow-md hover:-translate-y-1 w-full sm:w-auto">
+                <i data-lucide="apple" class="w-6 h-6 text-slate-700"></i>
+                <div class="text-left">
+                    <div class="text-xs text-slate-500 font-medium">Coming Soon</div>
+                    <div class="font-semibold text-lg leading-tight">iOS App Store</div>
+                </div>
+            </button>
+        </div>
+    </section>
+
+    <!-- The Problem Section -->
+    <section id="problem" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">Why we built itvy</h2>
+                <p class="mt-4 text-lg text-slate-600">Travel planning is broken and fragmented. We're fixing it.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="bg-slate-50 rounded-3xl p-8 border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
+                    <div class="w-12 h-12 bg-red-100 rounded-2xl flex items-center justify-center mb-6 text-red-600">
+                        <i data-lucide="image-off"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Inspiration Friction</h3>
+                    <p class="text-slate-600 leading-relaxed">"I saw this cool place on TikTok, but where exactly is it?" Translating visual inspiration to a map is tedious.</p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-slate-50 rounded-3xl p-8 border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
+                    <div class="w-12 h-12 bg-orange-100 rounded-2xl flex items-center justify-center mb-6 text-orange-600">
+                        <i data-lucide="calendar-off"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Static Planning</h3>
+                    <p class="text-slate-600 leading-relaxed">Traditional itineraries don't adapt. If your flight is delayed or you overspend, your spreadsheet won't recalculate.</p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-slate-50 rounded-3xl p-8 border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
+                    <div class="w-12 h-12 bg-blue-100 rounded-2xl flex items-center justify-center mb-6 text-blue-600">
+                        <i data-lucide="search-x"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Information Overload</h3>
+                    <p class="text-slate-600 leading-relaxed">Generic "Top 10" blog posts push you into tourist traps and make you miss the authentic, hidden gems.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Roadmap -->
+    <section id="features" class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">The Journey Ahead</h2>
+                <p class="mt-4 text-lg text-slate-600">Our roadmap from a smart planner to an autonomous agent.</p>
+            </div>
+
+            <div class="space-y-8 max-w-4xl mx-auto">
+                <!-- Phase 1 -->
+                <div class="bg-white rounded-3xl p-8 border border-slate-200 shadow-sm relative overflow-hidden">
+                    <div class="absolute top-0 left-0 w-2 h-full bg-blue-500"></div>
+                    <div class="flex items-center gap-3 mb-4">
+                        <span class="bg-blue-100 text-blue-700 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">Current</span>
+                        <h3 class="text-2xl font-bold text-slate-900">Phase 1: Foundation</h3>
+                    </div>
+                    <ul class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6">
+                        <li class="flex items-center gap-3 text-slate-700"><i data-lucide="check-circle-2" class="text-green-500 w-5 h-5"></i> Modern UI (Material 3)</li>
+                        <li class="flex items-center gap-3 text-slate-700"><i data-lucide="check-circle-2" class="text-green-500 w-5 h-5"></i> Clean Architecture + Hilt</li>
+                        <li class="flex items-center gap-3 text-slate-700"><i data-lucide="check-circle-2" class="text-green-500 w-5 h-5"></i> AI-Powered (Gemini API)</li>
+                        <li class="flex items-center gap-3 text-slate-700"><i data-lucide="check-circle-2" class="text-green-500 w-5 h-5"></i> Local Persistence (Room)</li>
+                    </ul>
+                </div>
+
+                <!-- Phase 2 -->
+                <div class="bg-white/60 rounded-3xl p-8 border border-slate-200 border-dashed relative">
+                    <div class="flex items-center gap-3 mb-4">
+                        <span class="bg-purple-100 text-purple-700 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">Coming Soon</span>
+                        <h3 class="text-2xl font-bold text-slate-900">Phase 2: Intelligence</h3>
+                    </div>
+                    <ul class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6">
+                        <li class="flex items-center gap-3 text-slate-500"><i data-lucide="circle" class="w-5 h-5"></i> Screenshot OCR Parsing</li>
+                        <li class="flex items-center gap-3 text-slate-500"><i data-lucide="circle" class="w-5 h-5"></i> Social URL Metadata Extraction</li>
+                        <li class="flex items-center gap-3 text-slate-500"><i data-lucide="circle" class="w-5 h-5"></i> Visual Mapping to GPS</li>
+                    </ul>
+                </div>
+
+                <!-- Phase 3 -->
+                <div class="bg-slate-50 rounded-3xl p-8 border border-slate-200 border-dashed relative">
+                    <div class="flex items-center gap-3 mb-4">
+                        <span class="bg-slate-200 text-slate-600 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">Planned</span>
+                        <h3 class="text-2xl font-bold text-slate-900">Phase 3: Live Experience</h3>
+                    </div>
+                    <ul class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6">
+                        <li class="flex items-center gap-3 text-slate-500"><i data-lucide="circle" class="w-5 h-5"></i> Contextual Weather/Time Awareness</li>
+                        <li class="flex items-center gap-3 text-slate-500"><i data-lucide="circle" class="w-5 h-5"></i> Dynamic Budget Recalculation</li>
+                        <li class="flex items-center gap-3 text-slate-500"><i data-lucide="circle" class="w-5 h-5"></i> Live Crowd Monitoring</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tech Stack -->
+    <section id="tech" class="py-20 bg-slate-900 text-white rounded-t-[3rem] mt-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold tracking-tight sm:text-4xl">Under the Hood</h2>
+                <p class="mt-4 text-lg text-slate-400">Built with modern Android development practices.</p>
+            </div>
+
+            <div class="flex flex-wrap justify-center gap-4 max-w-4xl mx-auto">
+                <!-- Tech Badges -->
+                <span class="px-5 py-3 rounded-xl bg-slate-800 border border-slate-700 flex items-center gap-2 hover:bg-slate-700 transition-colors cursor-default">
+                    <i data-lucide="code-2" class="text-purple-400 w-5 h-5"></i> Kotlin
+                </span>
+                <span class="px-5 py-3 rounded-xl bg-slate-800 border border-slate-700 flex items-center gap-2 hover:bg-slate-700 transition-colors cursor-default">
+                    <i data-lucide="layers" class="text-green-400 w-5 h-5"></i> Jetpack Compose
+                </span>
+                <span class="px-5 py-3 rounded-xl bg-slate-800 border border-slate-700 flex items-center gap-2 hover:bg-slate-700 transition-colors cursor-default">
+                    <i data-lucide="cpu" class="text-blue-400 w-5 h-5"></i> Google Gemini API
+                </span>
+                <span class="px-5 py-3 rounded-xl bg-slate-800 border border-slate-700 flex items-center gap-2 hover:bg-slate-700 transition-colors cursor-default">
+                    <i data-lucide="database" class="text-yellow-400 w-5 h-5"></i> Room Database
+                </span>
+                <span class="px-5 py-3 rounded-xl bg-slate-800 border border-slate-700 flex items-center gap-2 hover:bg-slate-700 transition-colors cursor-default">
+                    <i data-lucide="network" class="text-red-400 w-5 h-5"></i> Retrofit & OkHttp
+                </span>
+                <span class="px-5 py-3 rounded-xl bg-slate-800 border border-slate-700 flex items-center gap-2 hover:bg-slate-700 transition-colors cursor-default">
+                    <i data-lucide="box" class="text-indigo-400 w-5 h-5"></i> Dagger Hilt
+                </span>
+            </div>
+        </div>
+
+        <!-- Footer inside the dark section -->
+        <footer class="mt-20 border-t border-slate-800 pt-10 pb-10 text-center">
+            <div class="flex justify-center gap-6 mb-6">
+                <a href="https://github.com/itechniqs/itvy" target="_blank" class="text-slate-400 hover:text-white transition-colors">
+                    <i data-lucide="github" class="w-6 h-6"></i>
+                </a>
+            </div>
+            <p class="text-slate-400">Released under the MIT License.</p>
+            <p class="text-slate-500 mt-2 flex items-center justify-center gap-1">
+                Built with <i data-lucide="heart" class="w-4 h-4 text-red-500 fill-red-500"></i> by <strong>iTechniqs</strong>
+            </p>
+        </footer>
+    </section>
+
+    <!-- Initialize Lucide Icons -->
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
